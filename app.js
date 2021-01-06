@@ -20,20 +20,33 @@ document.querySelectorAll(".dropdown").forEach(function(element) {
     Carousel-Slide Shows 
 */
 let prevSlide = 0;
-let element = 0;
+let slideIndex = 0;
 
 const slides = document.querySelectorAll(".slides");
+const radioButtons = document.querySelectorAll(".container--radio");
+
+let slideInterval = setInterval(showSlides, 3000);
+
+radioButtons.forEach(function(element, index) {
+    element.addEventListener("click", function() {
+        slideIndex = index;
+        clearInterval(slideInterval);
+        showSlides();
+        slideInterval = setInterval(showSlides, 3000);
+    })
+})
 
 function showSlides(){
     
     slides[prevSlide].style.display = "none";
     
-    if (element >= 6){
-        element = 0;
+    if (slideIndex >= 6){
+        slideIndex = 0;
     }
-    slides[element].style.display = "block";
-    prevSlide = element;
-    element++;
+    
+    radioButtons[slideIndex].querySelector("input").checked = true;
+    slides[slideIndex].style.display = "block";
+    prevSlide = slideIndex;
+    slideIndex++;
 }
 showSlides();
-setInterval(showSlides, 3000);
