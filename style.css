@@ -113,6 +113,11 @@ a {
     color: #d43a32;
 }
 
+.dropdown-content li:hover > a {
+    background-color: #f5f5f5;
+    color: #d43a32;
+}
+
 .slides {
     width: 98%;
     display: none;
