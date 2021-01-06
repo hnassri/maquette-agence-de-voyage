@@ -3,13 +3,13 @@
 */
 
 document.querySelectorAll(".dropdown").forEach(function(element) {
-    element.addEventListener("click", function(){
+    element.querySelector("div").addEventListener("click", function(){
         const i = this.querySelector('i');
         if(!i.classList.contains("isDropdown")){
-            this.querySelector(".dropdown-content").style.display = "block";
+            element.querySelector(".dropdown-content").style.display = "block";
             i.classList.add("isDropdown");
         }else {
-            this.querySelector(".dropdown-content").style.display = "none";
+            element.querySelector(".dropdown-content").style.display = "none";
             i.classList.remove("isDropdown");
         }
         
