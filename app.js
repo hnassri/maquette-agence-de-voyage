@@ -36,12 +36,28 @@ radioButtons.forEach(function(element, index) {
     })
 })
 
+document.querySelector(".fa-chevron-left").addEventListener("click", function() {
+    slideIndex -= 2;
+    clearInterval(slideInterval);
+    showSlides();
+    slideInterval = setInterval(showSlides, 3000);
+})
+
+document.querySelector(".fa-chevron-right").addEventListener("click", function() {
+    clearInterval(slideInterval);
+    showSlides();
+    slideInterval = setInterval(showSlides, 3000);
+})
+
 function showSlides(){
     
     slides[prevSlide].style.display = "none";
     
     if (slideIndex >= 6){
         slideIndex = 0;
+    }
+    if (slideIndex < 0){
+        slideIndex = 5;
     }
     
     radioButtons[slideIndex].querySelector("input").checked = true;

@@ -11,49 +11,57 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
-        <header>
-            <div class="container container-network background--color-blue">
-                <a href="https://www.facebook.fr"><img src="assets/20.png" alt="logo-facebook" class="logo-network" /></a>
-                <a href="htpps://www.twitter.fr"><img src="assets/19.png" alt="logo-twiter" /></a>
+        <header class="container">
+            <div class="container background--color-blue">
+                <div class="container container-sub container-network">
+                    <a href="https://www.facebook.fr"><img src="assets/20.png" alt="logo-facebook" class="logo-network" /></a>
+                    <a href="htpps://www.twitter.fr"><img src="assets/19.png" alt="logo-twiter" class="logo-network" /></a>
+                </div>
             </div>
+            
 
             <span class="row"></span>
-
-            <nav class="container container-nav background--color-purple">
-                <img src="assets/18.jpg.png" alt="logo Safy" id="logo-nav-Safy" />
-                <ul>
-                    <li><a href="#" class="text--color-red">Home</a></li>
-                    <li class="dropdown">
-                        <div class="container container-dropdown">
-                            Book
-                            <i class="triangle triangle--down"></i>
-                        </div>
-                        <ul class="dropdown-content">
-                            <li><a href="#">France</li></a>
-                            <li><a href="#">Brazil</a></li>
-                            <li><a href="#">Algeria</a></li>
+            <div class="container background--color-purple">
+                <nav class="container container-sub container-nav">
+                    <div class="container-nav-logo">
+                        <img src="assets/18.jpg.png" alt="logo Safy" id="logo-nav-Safy" />
+                    </div>
+                    
+                    <div class="container list--nav-width">
+                        <ul class="container-nav-list">
+                            <li><a href="#" class="text--color-red">Home</a></li>
+                            <li class="dropdown">
+                                <div class="container container-dropdown">
+                                    Book
+                                    <i class="triangle triangle--down"></i>
+                                </div>
+                                <ul class="dropdown-content">
+                                    <li><a href="#">France</li></a>
+                                    <li><a href="#">Brazil</a></li>
+                                    <li><a href="#">Algeria</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <div class="container container-dropdown">
+                                    Destinations
+                                    <i class="triangle triangle--down"></i>
+                                </div>
+                                <ul class="dropdown-content">
+                                    <li><a href="#">France</a></li>
+                                    <li><a href="#">Brazil</a></li>
+                                    <li><a href="#">Algeria</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Prices</a></li>
+                            <li><a href="#">Alerts</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
-                    </li>
-                    <li class="dropdown">
-                        <div class="container container-dropdown">
-                            Destinations
-                            <i class="triangle triangle--down"></i>
-                        </div>
-                        <ul class="dropdown-content">
-                            <li><a href="#">France</a></li>
-                            <li><a href="#">Brazil</a></li>
-                            <li><a href="#">Algeria</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Prices</a></li>
-                    <li><a href="#">Alerts</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-
+                    </div>
+                </nav>
+            </div>
             <span class="row"></span>
-            <div class="container container-slides">
-                <div class="container container-slideShow">
+            <div class="container container-slides background--color-blue">
+                <div class="container container-sub container-slideShow">
 
                     <div class="slides">
                         <img src="assets/6.jpg" alt="" />
@@ -73,15 +81,14 @@
                     <div class="slides">
                         <img src="assets/11.jpg" alt="" />
                     </div>
-                    <div id="Arrows">
-                        <i class="chevron-left"></i>
-                        <i class="chevron-right"></i>
-
+                    <div class="arrow">
+                        <i class="fa fa-chevron-left fa-2x"></i>
+                        <i class="fa fa-chevron-right fa-2x"></i>
                     </div>
                     
                     
                 </div>
-                <div class="container container-checkmark">
+                <div class="container container-sub container-checkmark">
                     <label class="container--radio">
                         <input type="radio" checked="checked" name="radio">
                         <span class="checkmark"></span>
@@ -110,6 +117,7 @@
             </div>
             <span class="row"></span>
         </header>
+        <script src="https://kit.fontawesome.com/872a4d227c.js" crossorigin="anonymous"></script>
         <script src="app.js"></script>
     </body>
 </html>

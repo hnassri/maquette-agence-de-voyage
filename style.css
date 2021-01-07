@@ -18,9 +18,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.container-sub {
+    width: 98%;
+    align-items: normal;
+}
 
 .container-network {
-    padding: 20px 5px;
+    padding: 20px 0px;
     flex-direction: row;
     justify-content: flex-start;
 }
@@ -28,6 +32,12 @@ body {
 .container-nav {
     flex-direction: column;
     align-items: center;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+.container-nav-logo {
+    width: 80%;
 }
 
 .container-dropdown {
@@ -42,6 +52,10 @@ body {
     align-items: center;
 }
 
+.container-nav-list {
+    width: 100%;
+}
+
 .container-checkmark {
     flex-direction: row;
     justify-content: center;
@@ -53,7 +67,8 @@ body {
 }
 
 .container-slides {
-    height: 250px;
+    padding-top: 2em;
+    padding-bottom: 2em;
     justify-content: center;
 }
 
@@ -63,10 +78,6 @@ body {
     margin-right: 2px;
 }
 
-#logo-nav-Safy{
-    width: 80%;
-    height: 80%;
-}
 
 li {
     list-style: none;
@@ -74,11 +85,11 @@ li {
     border-top: 2px solid #d9d9d9;
     padding-left: 20px;
     font-weight: bold;
+    font-size: 15px;
 }
 
 ul {
     padding: 0;
-    width: 98%;
 }
 
 .text--color-red {
@@ -134,11 +145,10 @@ a {
 }
 
 .slides {
-    width: 98%;
     display: none;
 }
 
-.slides img {
+img {
     width: 100%;
     height: 100%;
 }
@@ -172,11 +182,6 @@ a {
     border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
-.container--radio:hover input ~ .checkmark {
-    background-color: #556969;
-  }
-  
   /* When the radio button is checked, add a blue background */
   .container--radio input:checked ~ .checkmark {
     background-color: #8aabab;
@@ -204,25 +209,8 @@ a {
     background: #d93e39;
 }
 
+
 .arrow {
-    border: solid white;
-    border-width: 0 9px 9px 0;
-    display: inline-block;
-    padding: 9px;
-}
-
-.arrow-right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-  
-.arrow-left {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-}
-
-
-#Arrows{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -231,8 +219,8 @@ a {
 	width: 100%;
 }
 
-#Arrows i{
-	background-color: rgba(0, 0, 0, .5);
+.arrow i{
+	background-color: rgba(0, 0, 0, .25);
 	color: white;
     cursor: pointer;
     width: 25px;
@@ -240,29 +228,65 @@ a {
 	padding: 15px;
 	border-radius: 50%;
 	transition: background-color .5s, color .5s;
-	margin: 0 5px;
+	margin: 0 10px;
+	text-align: center;
 }
 
-#Arrows i:first-of-type{ 
+.arrow i:first-of-type{ 
 	padding-right: 20px;
 }
 
-#Arrows i:last-of-type{ 
+.arrow i:last-of-type{ 
 	padding-left: 20px;
 }
 
-#Arrows i:hover{
+.arrow i:hover{
 	background-color: rgba(0,0,0, .75);
 	color: #EEEFF7;
 }
 
-.chevron-left {
-    background-image: url("assets/chevron-left-solid.svg");
-    background-repeat: no-repeat;
-    color: white;
+@media screen and (min-width: 400px) {
+    .container-sub {
+        width: 70%;
+    }
+    .container-nav-logo {
+        width: 238px;
+        height: 100%;
+    }
 }
 
-.chevron-right {
-    background-image: url("assets/chevron-right-solid.svg");
-    background-repeat: no-repeat;
+@media screen and (min-width: 750px) {
+    .container-sub {
+        width: 90%;
+    }
+    .container-nav {
+        align-items: normal;
+    }
+    .container-nav-list {
+    	display: flex;
+        flex-direction: row;
+    }
+    .container-nav-list > li {
+    	border: none;
+    }
+
+    .container-nav-list > li:first-of-type {
+    	padding-left: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container-sub {
+        width: 50%;
+    }
+
+    .container-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1.7em;
+        margin-bottom: 1.7em;
+    }
+
+    .list--nav-width {
+        width: auto;
+    }
 }
