@@ -256,7 +256,7 @@ img {
 
 main {
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
 
 .article {
@@ -301,6 +301,9 @@ main {
 }
 
 .flag {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
     margin-right: .5em;
     margin-left: .5em;    
 }
@@ -317,13 +320,34 @@ main {
 .flag-display {
     display: none;
 }
+
+.text-border-gray {
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-size {
+    font-size: 18px;
+}
 @media screen and (min-width: 450px) {
     .container-sub {
         width: 400px;
     }
-    .container-nav-logo {
-        width: 238px;
-        height: 100%;
+    #logo-nav-Safy{
+        width: 250px;
+        height: 82px;
+    }
+    .slides img {
+        width: 400px;
+        height: 153px;
+    }
+    .flag-country {
+        width: 372px;
+        height: 185px;
     }
 }
 
@@ -346,6 +370,11 @@ main {
     	padding-left: 0;
     }
 
+    #logo-nav-Safy{
+        width: 299px;
+        height: 98px;
+    }
+
     .container-main {
         flex-direction: row;
         justify-content: space-between;
@@ -362,6 +391,14 @@ main {
     .flag-display {
         display: block;
     }
+    .flag-country {
+        width: 255px;
+        height: 127px;
+    }
+    .slides img {
+        width: 850px;
+        height: 326px;
+    }
 }
 @media screen and (min-width: 1200px) {
     .container-sub {
@@ -371,6 +408,7 @@ main {
     .container-nav {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         margin-top: 1.7em;
         margin-bottom: 1.7em;
     }
@@ -386,5 +424,13 @@ main {
     .flag-country {
         width: 281px;
         height: 140px;
+    }
+    .slides img {
+        width: 940px;
+        height: 360px;
+    }
+
+    main {
+        padding-bottom: 4em;
     }
 }

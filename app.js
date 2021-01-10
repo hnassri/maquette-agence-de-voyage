@@ -1,3 +1,5 @@
+
+
 /* 
     DROPDOWNS 
 */
@@ -66,3 +68,59 @@ function showSlides(){
     slideIndex++;
 }
 showSlides();
+
+function resize_image(){
+    let sizeWindow = window.innerWidth;
+    let x = 6;
+    if(sizeWindow >= 1200){
+
+        //Slides images
+        slides.forEach(function(element) {
+            element.querySelector("img").src = `assets/${x}.jpg`;
+            x++;
+        })
+
+        //Logo Safy from navbar
+        document.getElementById('logo-nav-Safy').src = `assets/18-2.jpg.png`;
+
+        //Flag images
+        document.querySelectorAll(".flag-country").forEach(function(element, index) {
+            element.src = `assets/${index+3}.jpg`;
+        })
+
+    }else if (sizeWindow >= 900){  
+
+        //Slides images
+        slides.forEach(function(element) {
+            element.querySelector("img").src = `assets/${x}-2.jpg`;
+            x++;
+        })
+
+        //Logo Safy from navbar
+        document.getElementById('logo-nav-Safy').src = `assets/18-2.jpg.png`;
+
+        //Flag images
+        document.querySelectorAll(".flag-country").forEach(function(element, index) {
+            element.src = `assets/${index+3}-2.jpg`;
+        })
+    }else {
+
+        //Slides images
+        slides.forEach(function(element) {
+            element.querySelector("img").src = `assets/${x}-3.jpg`;
+            x++;
+        })
+
+        //Logo Safy from navbar
+        document.getElementById('logo-nav-Safy').src = `assets/18-3.jpg.png`;
+
+        //Flag images
+        document.querySelectorAll(".flag-country").forEach(function(element, index) {
+            element.src = `assets/${index+3}-3.jpg`;
+        })
+    }
+    x = 6;
+    console.log(sizeWindow)
+}
+resize_image();
+window.addEventListener("resize" , resize_image);
