@@ -119,8 +119,18 @@ function resize_image(){
             element.src = `assets/${index+3}-3.jpg`;
         })
     }
+    const home = document.getElementById('Home');
+    if(sizeWindow <= 450){
+        
+        if(!home.classList.contains('text--color-red')){
+            home.classList.add("text--color-red")
+        }
+    }else{
+        if(home.classList.contains('text--color-red')){
+            home.classList.remove("text--color-red")
+        }
+    }
     x = 6;
-    console.log(sizeWindow)
 }
 resize_image();
 window.addEventListener("resize" , resize_image);

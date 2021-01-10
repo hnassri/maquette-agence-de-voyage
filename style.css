@@ -76,6 +76,17 @@ body {
     align-items: normal;
 }
 
+.container-nav-footer {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-start;
+    min-height: 10px;
+    padding-top: 4em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
 .logo-network {
     width: 24px;
     height: 24px;
@@ -89,7 +100,7 @@ li {
     border-top: 2px solid #d9d9d9;
     padding-left: 20px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 ul {
@@ -136,6 +147,10 @@ a {
     width: 100%;
     background-color: #cccccc;
 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .dropdown-content li:hover {
@@ -326,6 +341,10 @@ main {
     border-bottom: 1px solid #d9d9d9;
 }
 
+.color-gray {
+    color: #595959;
+}
+
 .text-bold {
     font-weight: bold;
 }
@@ -333,6 +352,111 @@ main {
 .text-size {
     font-size: 18px;
 }
+
+/*
+    FOOTER
+*/
+
+.text-size-footer {
+    font-size: 15px;
+}
+
+.nav-footer {
+    padding-right: 30px;
+}
+
+.pl-footer {
+    padding-left: .5em;
+}
+.pb-2 {
+    padding-bottom: 2em;
+}
+.pb-4 {
+    padding-bottom: 4em;
+}
+
+.text-copyright {
+    color: rgb(116, 113, 113);
+    font-size: 12px;
+}
+
+#boussole {
+    width: 98px;
+    height: 103px;
+}
+
+#maps {
+    width: 113px;
+    height: 94px;
+}
+
+#vélo {
+    width: 108px;
+    height: 73px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.ai-flex-start {
+    align-items: flex-start;
+}
+
+.img-footer-info {
+    float: left;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+.background--color-green {
+    background-color: #81ac6a;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.footer-title {
+    font-weight: normal;
+}
+.container-footer-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 15px;
+}
+
+.infos-section {
+    width: 100%;
+}
+/*
+    Media queries
+*/
+
 @media screen and (min-width: 450px) {
     .container-sub {
         width: 400px;
@@ -348,6 +472,9 @@ main {
     .flag-country {
         width: 372px;
         height: 185px;
+    }
+    .nav-footer {
+        padding-right: 20px;
     }
 }
 
@@ -398,6 +525,14 @@ main {
     .slides img {
         width: 850px;
         height: 326px;
+    }
+
+    .container-nav-footer {
+        padding-top: 2em;
+    }
+
+    .infos-section {
+        width: 48%;
     }
 }
 @media screen and (min-width: 1200px) {
